@@ -29,12 +29,12 @@ displayName="Melon Mod" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="melonmod.png" #optional
 # A text field displayed in the mod UI
-credits="" #optional
+credits="Torchwood1#4320, EggyWeggy#0001" #optional
 # A text field displayed in the mod UI
-authors="" #optional
+authors="Torchwood1#4320, EggyWeggy#0001" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-
+The mod is still very much in Beta but it aims to add a bunch of melon related stuff including it's own dimension, when i get around to it
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.melonmod]] #optional

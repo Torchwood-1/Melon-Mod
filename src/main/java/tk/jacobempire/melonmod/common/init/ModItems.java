@@ -51,9 +51,5 @@ public class ModItems {
     public static final RegistryObject<MelonElytra> MELON_ELYTRA = ITEMS.register("melon_elytra",
             () -> new MelonElytra((new Item.Properties()).durability(432).tab(ItemGroup.TAB_TRANSPORTATION).rarity(Rarity.UNCOMMON)));
 
-    //comment
-    public static final RegistryObject<MelonElytra> MELON_ELYTRA = ITEMS.register("melon_elytra",
-            () -> new MelonElytra((new Item.Properties()).durability(432).tab(ItemGroup.TAB_TRANSPORTATION).rarity(Rarity.UNCOMMON)));
-
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
 }
