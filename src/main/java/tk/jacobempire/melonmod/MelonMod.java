@@ -25,8 +25,6 @@ public class MelonMod
     public MelonMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         RegistryHandler.init();
-
-//        ModBlocks.registerBlocks();
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
         MinecraftForge.EVENT_BUS.register(this);

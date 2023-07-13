@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "melonmod:block/melon_grass_block_top"
+  }
+}
