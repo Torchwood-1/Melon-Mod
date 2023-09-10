@@ -25,6 +25,12 @@ public class ModBlocks {
                     .strength(3.0F, 3.0F)
                     .harvestLevel(2)
                     .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> MOBBLESTONE = BLOCKS.register("mobblestone",
+            () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.STONE)
+                    .strength(3.0F, 3.0F)
+                    .harvestLevel(2)
+                    .sound(SoundType.STONE)));
     public static final RegistryObject<Block> MELON_GRASS_BLOCK = BLOCKS.register("melon_grass_block",
             () -> new GrassBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT)
                     .strength(3.0F, 3.0F)
@@ -39,6 +45,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Item> MELON_STONE_ITEM = ITEMS.register("melon_stone",
             () -> new BlockItem(MELON_STONE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+
+    public static final RegistryObject<Item> MOBBLESTONE_ITEM = ITEMS.register("mobblestone",
+            () -> new BlockItem(MOBBLESTONE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> MELON_GRASS_BLOCK_ITEM = ITEMS.register("melon_grass",
             () -> new BlockItem(MELON_GRASS_BLOCK.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> MELON_ORE_ITEM = ITEMS.register("melon_ore",
@@ -54,7 +63,8 @@ public class ModBlocks {
         event.getRegistry().registerAll(
                 MELON_STONE.get(),
                 MELON_GRASS_BLOCK.get(),
-                MELON_ORE.get()
+                MELON_ORE.get(),
+                MOBBLESTONE.get()
         );
     }
 
@@ -63,7 +73,8 @@ public class ModBlocks {
         event.getRegistry().registerAll(
                 MELON_STONE_ITEM.get(),
                 MELON_GRASS_BLOCK_ITEM.get(),
-                MELON_ORE_ITEM.get()
+                MELON_ORE_ITEM.get(),
+               MOBBLESTONE_ITEM.get()
         );
     }
 }
