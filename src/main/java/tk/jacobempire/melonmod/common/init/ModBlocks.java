@@ -42,6 +42,12 @@ public class ModBlocks {
                     .harvestLevel(2)
                     .sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> MELON_GRASS = BLOCKS.register("melon_grass",
+            () -> new BushBlock(AbstractBlock.Properties.of(Material.REPLACEABLE_PLANT)
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()));
 
     public static final RegistryObject<Item> MELON_STONE_ITEM = ITEMS.register("melon_stone",
             () -> new BlockItem(MELON_STONE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
@@ -52,6 +58,8 @@ public class ModBlocks {
             () -> new BlockItem(MELON_GRASS_BLOCK.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> MELON_ORE_ITEM = ITEMS.register("melon_ore",
             () -> new BlockItem(MELON_ORE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> MELON_GRASS_ITEM = ITEMS.register("melon_grass",
+            () -> new BlockItem(MELON_GRASS.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
