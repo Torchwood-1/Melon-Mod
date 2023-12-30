@@ -48,7 +48,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Item> MOBBLESTONE_ITEM = ITEMS.register("mobblestone",
             () -> new BlockItem(MOBBLESTONE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
-    public static final RegistryObject<Item> MELON_GRASS_BLOCK_ITEM = ITEMS.register("melon_grass",
+    public static final RegistryObject<Item> MELON_GRASS_BLOCK_ITEM = ITEMS.register("melon_grass_block",
             () -> new BlockItem(MELON_GRASS_BLOCK.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> MELON_ORE_ITEM = ITEMS.register("melon_ore",
             () -> new BlockItem(MELON_ORE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
