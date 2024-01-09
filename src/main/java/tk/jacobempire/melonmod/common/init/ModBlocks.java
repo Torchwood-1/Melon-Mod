@@ -14,6 +14,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tk.jacobempire.melonmod.MelonMod;
+import tk.jacobempire.melonmod.common.world.dimension.SimpleTeleporter;
 
 public class ModBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MelonMod.MODID);
@@ -36,8 +37,15 @@ public class ModBlocks {
                     .strength(3.0F, 3.0F)
                     .harvestLevel(2)
                     .sound(SoundType.GRASS)));
+
+//    public static final RegistryObject<Block> MELON_ORE = BLOCKS.register("melon_ore",
+//            () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.STONE)
+//                    .strength(6.0F, 6.0F)
+//                    .harvestLevel(2)
+//                    .sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> MELON_ORE = BLOCKS.register("melon_ore",
-            () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.STONE)
+            () -> new SimpleTeleporter(Block.Properties.of(Material.STONE, MaterialColor.STONE)
                     .strength(6.0F, 6.0F)
                     .harvestLevel(2)
                     .sound(SoundType.STONE)));
@@ -72,7 +80,9 @@ public class ModBlocks {
                 MELON_STONE.get(),
                 MELON_GRASS_BLOCK.get(),
                 MELON_ORE.get(),
-                MOBBLESTONE.get()
+                MOBBLESTONE.get(),
+                MELON_GRASS_BLOCK.get(),
+                MELON_GRASS.get()
         );
     }
 
@@ -82,7 +92,9 @@ public class ModBlocks {
                 MELON_STONE_ITEM.get(),
                 MELON_GRASS_BLOCK_ITEM.get(),
                 MELON_ORE_ITEM.get(),
-               MOBBLESTONE_ITEM.get()
+                MOBBLESTONE_ITEM.get(),
+                MELON_GRASS_BLOCK_ITEM.get(),
+                MELON_GRASS_ITEM.get()
         );
     }
 }
