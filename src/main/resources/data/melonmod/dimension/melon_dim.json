@@ -1,0 +1,12 @@
+{
+  "type": "melonmod:melon_dim",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 438999375,
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "melonmod:melon"
+    }
+  }
+}

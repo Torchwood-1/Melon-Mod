@@ -14,7 +14,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import tk.jacobempire.melonmod.common.init.ModBlocks;
 import tk.jacobempire.melonmod.common.init.ModItems;
-
+import tk.jacobempire.melonmod.common.world.ModBiomes;
+import tk.jacobempire.melonmod.common.world.ModCarvers;
+import tk.jacobempire.melonmod.common.world.dimension.ModDimensions;
 
 @Mod("melonmod")
 public class MelonMod
@@ -33,12 +35,13 @@ public class MelonMod
         RegistryHandler.init();
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
-        MinecraftForge.EVENT_BUS.register(this);
+        ModBiomes.BIOMES.register(eventBus);
+        ModCarvers.WORLD_CARVERS.register(eventBus);
 
+
+        MinecraftForge.EVENT_BUS.register(this);
         eventBus.addListener(this::doClientStuff);
-
         MinecraftForge.EVENT_BUS.register(this);
+
     }
-
-
 }
