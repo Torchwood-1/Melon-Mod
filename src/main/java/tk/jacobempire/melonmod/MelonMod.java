@@ -32,7 +32,6 @@ public class MelonMod
 
     public MelonMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        RegistryHandler.init();
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
         ModBiomes.BIOMES.register(eventBus);
