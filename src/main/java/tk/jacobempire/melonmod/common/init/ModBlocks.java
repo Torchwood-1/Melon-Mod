@@ -14,6 +14,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tk.jacobempire.melonmod.MelonMod;
+import tk.jacobempire.melonmod.common.block.MelonBushBlock;
 import tk.jacobempire.melonmod.common.world.dimension.SimpleTeleporter;
 
 public class ModBlocks {
@@ -51,7 +52,7 @@ public class ModBlocks {
                     .sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> MELON_GRASS = BLOCKS.register("melon_grass",
-            () -> new BushBlock(AbstractBlock.Properties.of(Material.REPLACEABLE_PLANT)
+            () -> new MelonBushBlock(AbstractBlock.Properties.of(Material.REPLACEABLE_PLANT)
                     .noCollission()
                     .instabreak()
                     .sound(SoundType.GRASS)

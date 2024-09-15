@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/tinted_cross",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "cross": "melonmod:block/melon_grass"
+    "layer0": "melonmod:block/melon_grass"
   }
 }
