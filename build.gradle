@@ -12,6 +12,12 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
+repositories {
+    maven {
+        url = "https://api.modrinth.com/maven"
+    }
+}
+
 version = '1.1-beta'
 group = 'tk.jacobempire.melonmod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'melonmod'
@@ -118,6 +124,8 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
+
+    implementation fg.deobf('maven.modrinth:jei:Z7DFEt7f')
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
