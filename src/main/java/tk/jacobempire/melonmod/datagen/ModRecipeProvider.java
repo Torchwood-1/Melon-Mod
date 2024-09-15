@@ -60,12 +60,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		ShapedRecipeBuilder.shaped(ModItems.MELON_SHOVEL.get())
 				.define('#', ModItems.MELON_STICK.get()).define('X', ModItems.MELON_INGOT.get())
 				.pattern("X").pattern("#").pattern("#")
-				.unlockedBy("has_iron_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
+				.unlockedBy("has_melon_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
 
 		ShapedRecipeBuilder.shaped(ModItems.MELON_AXE.get())
 				.define('#', ModItems.MELON_STICK.get()).define('X', ModItems.MELON_INGOT.get())
 				.pattern("XX").pattern("X#").pattern(" #")
-				.unlockedBy("has_iron_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
+				.unlockedBy("has_melon_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
 
 		// }}}
 		// Armor {{{
@@ -73,22 +73,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		ShapedRecipeBuilder.shaped(ModItems.MELON_BOOTS.get())
 				.define('X', ModItems.MELON_INGOT.get())
 				.pattern("X X").pattern("X X")
-				.unlockedBy("has_iron_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
+				.unlockedBy("has_melon_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
 
 		ShapedRecipeBuilder.shaped(ModItems.MELON_LEGGINGS.get())
 				.define('X', ModItems.MELON_INGOT.get())
 				.pattern("XXX").pattern("X X").pattern("X X")
-				.unlockedBy("has_iron_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
+				.unlockedBy("has_melon_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
 
 		ShapedRecipeBuilder.shaped(ModItems.MELON_CHESTPLATE.get())
 				.define('X', ModItems.MELON_INGOT.get())
 				.pattern("X X").pattern("XXX").pattern("XXX")
-				.unlockedBy("has_iron_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
+				.unlockedBy("has_melon_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
 
 		ShapedRecipeBuilder.shaped(ModItems.MELON_HELMET.get())
 				.define('X', ModItems.MELON_INGOT.get())
 				.pattern("XXX").pattern("X X")
-				.unlockedBy("has_iron_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
+				.unlockedBy("has_melon_ingot", has(ModItems.MELON_INGOT.get())).save(consumer);
 
 		ShapedRecipeBuilder.shaped(ModItems.MELON_ELYTRA.get())
 				.define('E', Items.ELYTRA)
