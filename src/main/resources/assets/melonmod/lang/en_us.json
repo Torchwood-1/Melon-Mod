@@ -14,5 +14,12 @@
 
   "item.melonmod.melon_horse_armor": "Melon Horse Armor",
   "item.melonmod.melon_ingot": "Melon Ingot",
-  "item.melonmod.melon_stick": "Melon Stick"
+  "item.melonmod.melon_stick": "Melon Stick",
+
+  "block.melonmod.mobblestone": "Mobblestone",
+  "block.melonmod.melon_stone": "Melon Stone",
+  "block.melonmod.melon_ore": "Melon Ore",
+
+  "block.melonmod.melon_grass": "Melon Grass",
+  "block.melonmod.melon_grass_block": "Melon Grass Block"
 }
