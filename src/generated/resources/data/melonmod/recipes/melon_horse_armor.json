@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "IHI",
+    "I I"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:leather_horse_armor"
+    },
+    "I": {
+      "item": "melonmod:melon_ingot"
+    }
+  },
+  "result": {
+    "item": "melonmod:melon_horse_armor"
+  }
+}

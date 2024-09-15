@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "melonmod:melon_stone"
+    ]
+  },
+  "criteria": {
+    "has_mobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "melonmod:mobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "melonmod:melon_stone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

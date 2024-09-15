@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SIS",
+    "IEI",
+    "SIS"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:elytra"
+    },
+    "I": {
+      "item": "melonmod:melon_ingot"
+    },
+    "S": {
+      "item": "minecraft:melon_slice"
+    }
+  },
+  "result": {
+    "item": "melonmod:melon_elytra"
+  }
+}

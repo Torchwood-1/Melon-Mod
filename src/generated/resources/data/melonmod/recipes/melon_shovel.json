@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "melonmod:melon_stick"
+    },
+    "X": {
+      "item": "melonmod:melon_ingot"
+    }
+  },
+  "result": {
+    "item": "melonmod:melon_shovel"
+  }
+}

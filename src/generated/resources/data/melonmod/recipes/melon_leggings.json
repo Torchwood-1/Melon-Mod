@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "melonmod:melon_ingot"
+    }
+  },
+  "result": {
+    "item": "melonmod:melon_leggings"
+  }
+}
