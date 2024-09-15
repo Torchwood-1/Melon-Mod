@@ -70,9 +70,9 @@ public class ModItems {
 
         //Ingots
         MELON_INGOT = ITEMS.register("melon_ingot",
-            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS).food(Foods.MELON_SLICE)));
         MELON_STICK = ITEMS.register("melon_stick",
-            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS).food(Foods.MELON_SLICE)));
 
         //Elytra
         MELON_ELYTRA = ITEMS.register("melon_elytra",
