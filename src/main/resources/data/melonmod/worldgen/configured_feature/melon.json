@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:decorated",
+	"config": {
+		"decorator": {
+			"type": "minecraft:count",
+			"config": {
+				"count": 4
+			}
+		},
+		"feature": {
+			"type": "minecraft:ore",
+			"config": {
+				"state": {
+					"Name": "melonmod:melon_ore"
+				},
+				"size": 0,
+				"target": {
+					"predicate_type": "minecraft:block_match",
+					"block": "melonmod:mobblestone"
+				}
+			}
+		}
+	}
+}

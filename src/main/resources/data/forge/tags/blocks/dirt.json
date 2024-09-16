@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		{
+			"id": "melonmod:melon_dirt"
+		},
+		{
+			"id": "melonmod:melon_grass_block"
+		}
+	]
+}
