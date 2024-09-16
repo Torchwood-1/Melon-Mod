@@ -1,3 +1,6 @@
+f0b5823f6a450e073a033f024733905c9e0f9c4f assets/melonmod/blockstates/melon_dirt.json
+fd621e14cc4b37d9378d35e547bb410925cb11f9 assets/melonmod/models/block/melon_dirt.json
+4dd79a62aa0bf27b8682446e53c1e300336c6cc7 assets/melonmod/models/item/melon_dirt.json
 d04ccabef611ab2686b7db34ff78b4037c476a46 data/melonmod/advancements/recipes/building_blocks/melon_stone.json
 354a06329392cd3137fdbe8f118125a3b1151d0e data/melonmod/advancements/recipes/combat/melon_boots.json
 d019b1eddbfe4fd49d12b3329a6afd2f10e14db6 data/melonmod/advancements/recipes/combat/melon_chestplate.json

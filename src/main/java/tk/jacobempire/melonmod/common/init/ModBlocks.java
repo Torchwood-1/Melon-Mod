@@ -15,6 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tk.jacobempire.melonmod.MelonMod;
 import tk.jacobempire.melonmod.common.block.MelonBushBlock;
+import tk.jacobempire.melonmod.common.block.MelonGrassBlock;
 import tk.jacobempire.melonmod.common.world.dimension.SimpleTeleporter;
 
 public class ModBlocks {
@@ -33,11 +34,17 @@ public class ModBlocks {
                     .strength(3.0F, 3.0F)
                     .harvestLevel(2)
                     .sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> MELON_GRASS_BLOCK = BLOCKS.register("melon_grass_block",
-            () -> new GrassBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT)
-                    .strength(3.0F, 3.0F)
-                    .harvestLevel(2)
+            () -> new MelonGrassBlock(Block.Properties.of(Material.GRASS, MaterialColor.COLOR_LIGHT_GREEN)
+                    .randomTicks()
+                    .strength(0.6F)
                     .sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Block> MELON_DIRT = BLOCKS.register("melon_dirt",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT, MaterialColor.COLOR_RED)
+                    .strength(0.5F)
+                    .sound(SoundType.GRAVEL)));
 
 //    public static final RegistryObject<Block> MELON_ORE = BLOCKS.register("melon_ore",
 //            () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.STONE)
@@ -58,6 +65,8 @@ public class ModBlocks {
                     .sound(SoundType.GRASS)
                     .noOcclusion()));
 
+    //TODO: make a method to add blocks and their items at the same time
+
     public static final RegistryObject<Item> MELON_STONE_ITEM = ITEMS.register("melon_stone",
             () -> new BlockItem(MELON_STONE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 
@@ -69,6 +78,8 @@ public class ModBlocks {
             () -> new BlockItem(MELON_ORE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> MELON_GRASS_ITEM = ITEMS.register("melon_grass",
             () -> new BlockItem(MELON_GRASS.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> MELON_DIRT_ITEM = ITEMS.register("melon_dirt",
+            () -> new BlockItem(MELON_DIRT.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
