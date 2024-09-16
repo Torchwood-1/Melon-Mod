@@ -1,22 +1,19 @@
 package tk.jacobempire.melonmod;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
-
 import net.minecraftforge.eventbus.api.IEventBus;
-
 import net.minecraftforge.fml.common.Mod;
-
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import tk.jacobempire.melonmod.common.init.ModBlocks;
 import tk.jacobempire.melonmod.common.init.ModItems;
 import tk.jacobempire.melonmod.common.world.ModBiomes;
 import tk.jacobempire.melonmod.common.world.ModCarvers;
-import tk.jacobempire.melonmod.common.world.dimension.ModDimensions;
 
 @Mod("melonmod")
 public class MelonMod
@@ -27,6 +24,7 @@ public class MelonMod
     private void doClientStuff(final FMLClientSetupEvent event){
         event.enqueueWork(() -> {
             RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS_BLOCK.get(), RenderType.cutout());
         });
     }
 
@@ -44,3 +42,4 @@ public class MelonMod
 
     }
 }
+
