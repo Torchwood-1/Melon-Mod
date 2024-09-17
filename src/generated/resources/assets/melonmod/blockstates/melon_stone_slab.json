@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "melonmod:block/melon_stone_slab_top"
+    },
+    "type=bottom": {
+      "model": "melonmod:block/melon_stone_slab"
+    },
+    "type=double": {
+      "model": "melonmod:block/melon_stone"
+    }
+  }
+}

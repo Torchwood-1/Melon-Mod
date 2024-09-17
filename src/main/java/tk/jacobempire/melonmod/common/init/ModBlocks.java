@@ -4,7 +4,9 @@ import java.util.function.Supplier;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -29,6 +31,19 @@ public class ModBlocks {
                     .harvestLevel(2)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)),
+            ItemGroup.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<SlabBlock> MELON_STONE_SLAB = registerBlock("melon_stone_slab",
+            () -> new SlabBlock(Block.Properties.of(Material.STONE, MaterialColor.STONE)
+                    .strength(3.5F, 3.0F)
+                    .harvestLevel(2)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)),
+            ItemGroup.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<StairsBlock> MELON_STONE_STAIRS = registerBlock("melon_stone_stairs",
+            () -> new StairsBlock(() -> MELON_STONE.get().defaultBlockState(),
+                    Block.Properties.copy(MELON_STONE.get())),
             ItemGroup.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> MOBBLESTONE = registerBlock("mobblestone",

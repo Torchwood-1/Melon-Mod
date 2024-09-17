@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "melonmod:block/melon_stone",
+    "bottom": "melonmod:block/melon_stone",
+    "top": "melonmod:block/melon_stone"
+  }
+}

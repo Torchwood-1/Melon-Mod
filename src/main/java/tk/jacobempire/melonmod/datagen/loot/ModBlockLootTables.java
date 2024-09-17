@@ -1,11 +1,6 @@
 package tk.jacobempire.melonmod.datagen.loot;
 
-import static tk.jacobempire.melonmod.common.init.ModBlocks.MELON_DIRT;
-import static tk.jacobempire.melonmod.common.init.ModBlocks.MELON_GRASS;
-import static tk.jacobempire.melonmod.common.init.ModBlocks.MELON_GRASS_BLOCK;
-import static tk.jacobempire.melonmod.common.init.ModBlocks.MELON_ORE;
-import static tk.jacobempire.melonmod.common.init.ModBlocks.MELON_STONE;
-import static tk.jacobempire.melonmod.common.init.ModBlocks.MOBBLESTONE;
+import static tk.jacobempire.melonmod.common.init.ModBlocks.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.data.loot.BlockLootTables;
@@ -25,8 +20,10 @@ public class ModBlockLootTables extends BlockLootTables {
 		this.add(MELON_GRASS.get(), block -> createGrassDrops(block, Items.MELON_SEEDS));
 		this.add(MELON_GRASS_BLOCK.get(), block -> createSingleItemTableWithSilkTouch(block, MELON_DIRT.get()));
 		this.add(MELON_STONE.get(), block -> createSingleItemTableWithSilkTouch(block, MOBBLESTONE.get()));
+		this.add(MELON_STONE_SLAB.get(), BlockLootTables::createSlabItemTable);
 		this.dropSelf(MELON_DIRT.get());
 		this.dropSelf(MELON_ORE.get());
+		this.dropSelf(MELON_STONE_STAIRS.get());
 		this.dropSelf(MOBBLESTONE.get());
 	}
 

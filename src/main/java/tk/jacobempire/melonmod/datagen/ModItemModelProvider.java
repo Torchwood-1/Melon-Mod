@@ -18,6 +18,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 	@Override
 	protected void registerModels() {
 		simpleBlockItem(MELON_DIRT.get());
+		simpleBlockItem(MELON_STONE_SLAB.get());
+		simpleBlockItem(MELON_STONE_STAIRS.get());
 	}
 
 	protected ItemModelBuilder simpleBlockItem(Block block) {
