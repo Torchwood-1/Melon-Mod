@@ -15,8 +15,9 @@ public class DataGenerators {
 		DataGenerator generator = event.getGenerator();
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-		generator.addProvider(new ModRecipeProvider(generator));
 		generator.addProvider(new ModBlockStateProvider(generator, MelonMod.MODID, existingFileHelper));
 		generator.addProvider(new ModItemModelProvider(generator, MelonMod.MODID, existingFileHelper));
+		generator.addProvider(new ModLootTableProvider(generator));
+		generator.addProvider(new ModRecipeProvider(generator));
 	}
 }

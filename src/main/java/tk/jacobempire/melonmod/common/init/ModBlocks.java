@@ -19,20 +19,22 @@ import tk.jacobempire.melonmod.common.block.MelonGrassBlock;
 import tk.jacobempire.melonmod.common.world.dimension.SimpleTeleporter;
 
 public class ModBlocks {
-    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MelonMod.MODID);
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MelonMod.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MelonMod.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MelonMod.MODID);
 
 
     public static final RegistryObject<Block> MELON_STONE = BLOCKS.register("melon_stone",
             () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.STONE)
                     .strength(3.0F, 3.0F)
                     .harvestLevel(2)
+                    .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> MOBBLESTONE = BLOCKS.register("mobblestone",
             () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.STONE)
                     .strength(3.0F, 3.0F)
                     .harvestLevel(2)
+                    .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> MELON_GRASS_BLOCK = BLOCKS.register("melon_grass_block",
