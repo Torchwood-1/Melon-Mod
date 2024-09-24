@@ -1,5 +1,8 @@
 package tk.jacobempire.melonmod.datagen;
 
+import static tk.jacobempire.melonmod.common.init.ModBlocks.*;
+import static tk.jacobempire.melonmod.common.init.ModItems.*;
+
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.Item;
@@ -7,7 +10,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import static tk.jacobempire.melonmod.common.init.ModBlocks.*;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -20,6 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 		simpleBlockItem(MELON_DIRT.get());
 		simpleBlockItem(MELON_STONE_SLAB.get());
 		simpleBlockItem(MELON_STONE_STAIRS.get());
+
+		handheldItem(MELON_STICK.get());
 	}
 
 	protected ItemModelBuilder simpleBlockItem(Block block) {
