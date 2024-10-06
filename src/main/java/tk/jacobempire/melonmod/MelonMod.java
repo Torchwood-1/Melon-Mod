@@ -12,7 +12,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tk.jacobempire.melonmod.common.init.ModBlocks;
 import tk.jacobempire.melonmod.common.init.ModItems;
-import tk.jacobempire.melonmod.common.world.ModBiomes;
 import tk.jacobempire.melonmod.common.world.ModCarvers;
 
 @Mod("melonmod")
@@ -32,7 +31,6 @@ public class MelonMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
-        ModBiomes.BIOMES.register(eventBus);
         ModCarvers.WORLD_CARVERS.register(eventBus);
 
 
