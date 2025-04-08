@@ -24,5 +24,7 @@
 
   "block.melonmod.melon_grass": "Melon Grass",
   "block.melonmod.melon_grass_block": "Melon Grass Block",
-  "block.melonmod.melon_dirt": "Melon Dirt"
+  "block.melonmod.melon_dirt": "Melon Dirt",
+
+  "entity.melonmod.melon_goblin": "Melon Goblin"
 }

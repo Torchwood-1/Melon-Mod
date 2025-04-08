@@ -7,10 +7,13 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import tk.jacobempire.melonmod.client.render.entity.MelonGoblinRenderer;
 import tk.jacobempire.melonmod.common.init.ModBlocks;
+import tk.jacobempire.melonmod.common.init.ModEntities;
 import tk.jacobempire.melonmod.common.init.ModItems;
 import tk.jacobempire.melonmod.common.world.ModCarvers;
 
@@ -25,6 +28,8 @@ public class MelonMod
             RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS_BLOCK.get(), RenderType.cutout());
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(ModEntities.MELON_GOBLIN.get(), MelonGoblinRenderer::new);
     }
 
     public MelonMod() {
@@ -32,12 +37,11 @@ public class MelonMod
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
         ModCarvers.WORLD_CARVERS.register(eventBus);
-
+        ModEntities.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         eventBus.addListener(this::doClientStuff);
         MinecraftForge.EVENT_BUS.register(this);
-
     }
 }
 
