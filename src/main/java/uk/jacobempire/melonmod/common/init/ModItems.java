@@ -86,7 +86,7 @@ public class ModItems {
 
         // Spawn Eggs
         MELON_GOBLIN_SPAWN_EGG = ITEMS.register("melon_goblin_spawn_egg",
-                () -> new ForgeSpawnEggItem(ModEntities.MELON_GOBLIN, 0x52811c, 0xa7ac1d,
+                () -> new ForgeSpawnEggItem(ModEntities.MELON_GOBLIN, -1, -1,
                         new Item.Properties().tab(ItemGroup.TAB_MISC)));
     }
 
