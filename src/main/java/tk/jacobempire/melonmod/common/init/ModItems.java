@@ -2,6 +2,7 @@ package tk.jacobempire.melonmod.common.init;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,6 +36,9 @@ public class ModItems {
 
     // Elytra
     public static final RegistryObject<MelonElytra> MELON_ELYTRA;
+
+    // Spawn Eggs
+    public static final RegistryObject<ForgeSpawnEggItem> MELON_GOBLIN_SPAWN_EGG;
 
     public ModItems() {
 
@@ -79,6 +83,11 @@ public class ModItems {
         MELON_ELYTRA = ITEMS.register("melon_elytra",
                 () -> new MelonElytra((new Item.Properties()).durability(432).tab(ItemGroup.TAB_TRANSPORTATION)
                         .rarity(Rarity.UNCOMMON)));
+
+        // Spawn Eggs
+        MELON_GOBLIN_SPAWN_EGG = ITEMS.register("melon_goblin_spawn_egg",
+                () -> new ForgeSpawnEggItem(ModEntities.MELON_GOBLIN, 0x52811c, 0xa7ac1d,
+                        new Item.Properties().tab(ItemGroup.TAB_MISC)));
     }
 
     public static void register(IEventBus eventBus) {
