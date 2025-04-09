@@ -5,6 +5,10 @@ bin
 .metadata
 .classpath
 .project
+.factorypath
+
+# vscode
+.vscode
 
 # idea
 out
