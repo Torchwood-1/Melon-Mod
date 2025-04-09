@@ -24,7 +24,7 @@ repositories {
 }
 
 version = '1.1-beta'
-group = 'tk.jacobempire.melonmod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'uk.jacobempire.melonmod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'melonmod'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.

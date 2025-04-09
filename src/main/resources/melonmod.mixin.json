@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/sponge-mixins.json",
 	"required": false,
-	"package": "tk.jacobempire.melonmod.mixin",
+	"package": "uk.jacobempire.melonmod.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"injectors": {
 		"defaultRequire": 1
