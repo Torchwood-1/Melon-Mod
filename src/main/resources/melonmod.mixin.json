@@ -9,5 +9,8 @@
 	"refmap": "melonmod.mixin-refmap.json",
 	"client": [
 		"ElytraLayerMixin"
+	],
+	"mixins": [
+		"CatEntityMixin"
 	]
 }
