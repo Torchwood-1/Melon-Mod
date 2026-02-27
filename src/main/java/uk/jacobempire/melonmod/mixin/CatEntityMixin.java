@@ -1,6 +1,7 @@
 package uk.jacobempire.melonmod.mixin;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 
 import org.apache.logging.log4j.LogManager;
 import org.spongepowered.asm.mixin.Mixin;
@@ -37,6 +38,10 @@ public abstract class CatEntityMixin extends TameableEntity {
 
 			Field temptIngredientField = CatEntity.class.getDeclaredField("TEMPT_INGREDIENT");
 			temptIngredientField.setAccessible(true);
+
+			Field modifiersField = Field.class.getDeclaredField("modifiers");
+			modifiersField.setAccessible(true);
+			modifiersField.setInt(temptIngredientField, temptIngredientField.getModifiers() & ~Modifier.FINAL);
 
 			Ingredient temptIngredient = Ingredient.merge(ImmutableList.of(
 					(Ingredient) temptIngredientField.get(null),
