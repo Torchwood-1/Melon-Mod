@@ -6,8 +6,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import uk.jacobempire.melonmod.common.entity.MelonGoblinEntity;
-import uk.jacobempire.melonmod.common.entity.ModEntitySpawnPlacement;
 import uk.jacobempire.melonmod.common.init.ModEntities;
+import uk.jacobempire.melonmod.common.world.ModEntitySpawnPlacement;
 
 @EventBusSubscriber(bus = Bus.MOD)
 public class ModEvents {
