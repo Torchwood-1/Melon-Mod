@@ -1,0 +1,7 @@
+{
+  "_comment": "temporary model; needs texture",
+  "parent": "minecraft:block/fire_side0",
+  "textures": {
+    "fire": "melonmod:block/melon_fire_0"
+  }
+}

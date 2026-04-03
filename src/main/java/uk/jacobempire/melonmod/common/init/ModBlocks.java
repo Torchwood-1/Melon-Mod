@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
@@ -18,6 +19,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import uk.jacobempire.melonmod.MelonMod;
 import uk.jacobempire.melonmod.common.block.MelonBushBlock;
+import uk.jacobempire.melonmod.common.block.MelonFireBlock;
 import uk.jacobempire.melonmod.common.block.MelonGrassBlock;
 import uk.jacobempire.melonmod.common.world.dimension.SimpleTeleporter;
 
@@ -81,6 +83,12 @@ public class ModBlocks {
                     .sound(SoundType.GRASS)
                     .noOcclusion()),
             ItemGroup.TAB_DECORATIONS);
+
+    public static final RegistryObject<MelonFireBlock> MELON_FIRE = registerBlock("melon_fire",
+            () -> new MelonFireBlock(AbstractBlock.Properties.copy(Blocks.FIRE)));
+
+    public static final RegistryObject<Block> MELOBSIDIAN = registerBlock("melobsidian",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.HARD_CROP)));
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, ItemGroup tab) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),

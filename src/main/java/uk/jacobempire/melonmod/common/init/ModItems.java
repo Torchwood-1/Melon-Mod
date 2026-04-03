@@ -8,6 +8,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import uk.jacobempire.melonmod.MelonMod;
+import uk.jacobempire.melonmod.common.item.FlintAndMelonItem;
 import uk.jacobempire.melonmod.common.item.MelonElytra;
 import uk.jacobempire.melonmod.common.material.ModArmorMaterial;
 
@@ -29,6 +30,8 @@ public class ModItems {
     public static final RegistryObject<AxeItem> MELON_AXE;
     public static final RegistryObject<ShovelItem> MELON_SHOVEL;
     public static final RegistryObject<HoeItem> MELON_HOE;
+    public static final RegistryObject<FlintAndMelonItem> FLINT_AND_MELON = ITEMS.register("flint_and_melon",
+            () -> new FlintAndMelonItem(new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
 
     // Ingots
     public static final RegistryObject<Item> MELON_INGOT;
@@ -44,6 +47,8 @@ public class ModItems {
 
     };
 
+
+	// TODO: rewrite this; don't do everything in the static{} thingy
     static {
         // Armour
         MELON_HELMET = ITEMS.register("melon_helmet",

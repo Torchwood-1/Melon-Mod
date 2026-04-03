@@ -27,6 +27,7 @@ public class MelonMod
         event.enqueueWork(() -> {
             RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS_BLOCK.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.MELON_FIRE.get(), RenderType.cutout());
         });
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.MELON_GOBLIN.get(), MelonGoblinRenderer::new);

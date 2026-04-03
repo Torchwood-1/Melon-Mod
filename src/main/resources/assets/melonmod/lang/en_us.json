@@ -11,6 +11,7 @@
   "item.melonmod.melon_axe": "Melon Axe",
   "item.melonmod.melon_shovel": "Melon Shovel",
   "item.melonmod.melon_hoe": "Melon Hoe",
+  "item.melonmod.flint_and_melon": "Flint and Melon",
 
   "item.melonmod.melon_horse_armor": "Melon Horse Armor",
   "item.melonmod.melon_ingot": "Melon Ingot",
@@ -19,6 +20,8 @@
   "item.melonmod.melon_goblin_spawn_egg": "Melon Goblin Spawn Egg",
 
   "block.melonmod.mobblestone": "Mobblestone",
+  "block.melonmod.melobsidian": "Melobsidian",
+  "block.melonmod.melon_fire": "Melon Fire",
   "block.melonmod.melon_stone": "Melon Stone",
   "block.melonmod.melon_stone_slab": "Melon Stone Slab",
   "block.melonmod.melon_stone_stairs": "Melon Stone Stairs",
