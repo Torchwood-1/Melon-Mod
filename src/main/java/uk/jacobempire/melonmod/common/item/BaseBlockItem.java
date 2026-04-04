@@ -28,7 +28,8 @@ public class BaseBlockItem extends BlockItem {
         this.description = description;
     }
 
-    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+    public void appendHoverText(ItemStack stack, @Nullable World worldIn,
+            List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (!this.description.equals("")) {
             ItemUtils.addText(tooltip, this.description, TextFormatting.GREEN);
         }

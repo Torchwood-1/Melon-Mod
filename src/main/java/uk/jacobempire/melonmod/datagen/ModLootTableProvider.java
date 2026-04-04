@@ -21,21 +21,21 @@ import net.minecraft.util.ResourceLocation;
 import uk.jacobempire.melonmod.datagen.loot.ModBlockLootTables;
 
 public class ModLootTableProvider extends LootTableProvider {
-	private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> subProviders = ImmutableList
-			.of(Pair.of(ModBlockLootTables::new, LootParameterSets.BLOCK));
+    private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> subProviders = ImmutableList
+            .of(Pair.of(ModBlockLootTables::new, LootParameterSets.BLOCK));
 
-	public ModLootTableProvider(DataGenerator generator) {
-		super(generator);
-	}
+    public ModLootTableProvider(DataGenerator generator) {
+        super(generator);
+    }
 
-	@Override
-	protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> getTables() {
-		return subProviders;
-	}
+    @Override
+    protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> getTables() {
+        return subProviders;
+    }
 
-	@Override
-	protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker) {
-		map.forEach((id, table) -> LootTableManager.validate(validationtracker, id, table));
-	}
+    @Override
+    protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker) {
+        map.forEach((id, table) -> LootTableManager.validate(validationtracker, id, table));
+    }
 
 }

@@ -11,13 +11,13 @@ import uk.jacobempire.melonmod.common.world.ModEntitySpawnPlacement;
 
 @EventBusSubscriber(bus = Bus.MOD)
 public class ModEvents {
-	@SubscribeEvent
-	public static void onAttributeCreation(EntityAttributeCreationEvent event) {
-		event.put(ModEntities.MELON_GOBLIN.get(), MelonGoblinEntity.createAttributes().build());
-	}
+    @SubscribeEvent
+    public static void onAttributeCreation(EntityAttributeCreationEvent event) {
+        event.put(ModEntities.MELON_GOBLIN.get(), MelonGoblinEntity.createAttributes().build());
+    }
 
-	@SubscribeEvent
-	public static void commonSetup(FMLCommonSetupEvent event){
-		ModEntitySpawnPlacement.init();
-	}
+    @SubscribeEvent
+    public static void commonSetup(FMLCommonSetupEvent event) {
+        ModEntitySpawnPlacement.init();
+    }
 }

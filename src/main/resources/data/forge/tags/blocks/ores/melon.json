@@ -1,9 +1,9 @@
 {
-	"replace": false,
-	"values": [
-		{
-			"id": "melonmod:melon_ore"
-		}
-	]
+  "replace": false,
+  "values": [
+    {
+      "id": "melonmod:melon_ore"
+    }
+  ]
 }
 

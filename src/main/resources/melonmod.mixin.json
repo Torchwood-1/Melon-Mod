@@ -1,16 +1,16 @@
 {
-	"$schema": "https://json.schemastore.org/sponge-mixins.json",
-	"required": false,
-	"package": "uk.jacobempire.melonmod.mixin",
-	"compatibilityLevel": "JAVA_8",
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"refmap": "melonmod.mixin-refmap.json",
-	"client": [
-		"ElytraLayerMixin"
-	],
-	"mixins": [
-		"CatEntityMixin"
-	]
+  "$schema": "https://json.schemastore.org/sponge-mixins.json",
+  "required": false,
+  "package": "uk.jacobempire.melonmod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "melonmod.mixin-refmap.json",
+  "client": [
+    "ElytraLayerMixin"
+  ],
+  "mixins": [
+    "CatEntityMixin"
+  ]
 }

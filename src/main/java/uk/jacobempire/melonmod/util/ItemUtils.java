@@ -7,9 +7,6 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 
 public class ItemUtils {
-    public ItemUtils() {
-    }
-
     public static List<ITextComponent> addText(List<ITextComponent> tooltip, String text, TextFormatting colour) {
         tooltip.add(new StringTextComponent(colour + text));
         return tooltip;

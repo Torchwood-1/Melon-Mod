@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -18,12 +19,12 @@ import uk.jacobempire.melonmod.common.init.ModItems;
 import uk.jacobempire.melonmod.common.world.ModCarvers;
 
 @Mod("melonmod")
-public class MelonMod
-{
+public class MelonMod {
     public static final String MODID = "melonmod";
+    @SuppressWarnings("unused")
     private static final Logger LOGGER = LogManager.getLogger();
 
-    private void doClientStuff(final FMLClientSetupEvent event){
+    private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.MELON_GRASS_BLOCK.get(), RenderType.cutout());
@@ -31,6 +32,10 @@ public class MelonMod
         });
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.MELON_GOBLIN.get(), MelonGoblinRenderer::new);
+    }
+
+    public static ResourceLocation resource(String location) {
+        return new ResourceLocation(MODID, location);
     }
 
     public MelonMod() {
@@ -45,4 +50,3 @@ public class MelonMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
-

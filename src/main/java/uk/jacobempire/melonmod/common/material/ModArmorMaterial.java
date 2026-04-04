@@ -14,11 +14,11 @@ import uk.jacobempire.melonmod.MelonMod;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
-    MELON("melon",  33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
+    MELON("melon", 33, new int[] { 3, 6, 8, 3 }, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
         return Ingredient.of(Items.MELON);
     });
 
-    private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
+    private static final int[] HEALTH_PER_SLOT = new int[] { 13, 15, 16, 11 };
     private final String name;
     private final int durabilityMultiplier;
     private final int[] slotProtections;
@@ -29,8 +29,8 @@ public enum ModArmorMaterial implements IArmorMaterial {
     private final LazyValue<Ingredient> repairIngredient;
 
     private ModArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability,
-                             SoundEvent soundEvent, float toughness, float knockbackResistance,
-                             Supplier<Ingredient> repairMaterial) {
+            SoundEvent soundEvent, float toughness, float knockbackResistance,
+            Supplier<Ingredient> repairMaterial) {
         this.name = name;
         this.durabilityMultiplier = maxDamageFactor;
         this.slotProtections = damageReductionAmountArray;
@@ -40,7 +40,6 @@ public enum ModArmorMaterial implements IArmorMaterial {
         this.knockbackResistance = knockbackResistance;
         this.repairIngredient = new LazyValue<>(repairMaterial);
     }
-
 
     public int getDurabilityForSlot(EquipmentSlotType slotIn) {
         return HEALTH_PER_SLOT[slotIn.getIndex()] * this.durabilityMultiplier;
@@ -76,4 +75,3 @@ public enum ModArmorMaterial implements IArmorMaterial {
         return this.knockbackResistance;
     }
 }
-

@@ -5,8 +5,6 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import org.apache.logging.log4j.LogManager;
-
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.block.Block;
@@ -96,14 +94,14 @@ public class MelonFireBlock extends FireBlock {
     public boolean canCatchFire(IBlockReader world, BlockPos pos, Direction face) {
         BlockState blockState = world.getBlockState(pos);
         Block block = blockState.getBlock();
-        if(block instanceof IFlamelonable){
+        if (block instanceof IFlamelonable) {
             return ((IFlamelonable) block).isFlamelonable(blockState, world, pos, face);
         }
         return blockState.isFlammable(world, pos, face);
     }
 
     boolean isFlamelonable(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return getBurnOdd(state) > 0; 
+        return getBurnOdd(state) > 0;
     }
 
     private static int getFireTickDelay(Random random) {

@@ -10,14 +10,14 @@ import uk.jacobempire.melonmod.MelonMod;
 
 @EventBusSubscriber(modid = MelonMod.MODID, bus = Bus.MOD)
 public class DataGenerators {
-	@SubscribeEvent
-	public static void gatherData(GatherDataEvent event) {
-		DataGenerator generator = event.getGenerator();
-		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+    @SubscribeEvent
+    public static void gatherData(GatherDataEvent event) {
+        DataGenerator generator = event.getGenerator();
+        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-		generator.addProvider(new ModBlockStateProvider(generator, MelonMod.MODID, existingFileHelper));
-		generator.addProvider(new ModItemModelProvider(generator, MelonMod.MODID, existingFileHelper));
-		generator.addProvider(new ModLootTableProvider(generator));
-		generator.addProvider(new ModRecipeProvider(generator));
-	}
+        generator.addProvider(new ModBlockStateProvider(generator, MelonMod.MODID, existingFileHelper));
+        generator.addProvider(new ModItemModelProvider(generator, MelonMod.MODID, existingFileHelper));
+        generator.addProvider(new ModLootTableProvider(generator));
+        generator.addProvider(new ModRecipeProvider(generator));
+    }
 }

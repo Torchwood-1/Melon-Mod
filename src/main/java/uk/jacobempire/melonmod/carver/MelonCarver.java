@@ -2,9 +2,9 @@ package uk.jacobempire.melonmod.carver;
 
 import com.google.common.collect.ImmutableSet;
 import com.mojang.serialization.Codec;
+
 import net.minecraft.world.gen.carver.CaveWorldCarver;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
-import net.minecraftforge.fml.common.Mod;
 import uk.jacobempire.melonmod.common.init.ModBlocks;
 
 public class MelonCarver extends CaveWorldCarver {

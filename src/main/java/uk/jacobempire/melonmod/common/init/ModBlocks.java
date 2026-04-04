@@ -95,7 +95,6 @@ public class ModBlocks {
                 new Item.Properties().tab(tab)));
     }
 
-    @SuppressWarnings("unused")
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         return registerBlock(name, block, ItemGroup.TAB_BUILDING_BLOCKS);
     }

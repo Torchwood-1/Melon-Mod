@@ -35,6 +35,7 @@ public interface IFlamelonable {
      * @return A number ranging from 0 to 300 relating used to determine if the
      *         block will be consumed by fire
      */
+    @SuppressWarnings("deprecation")
     default int getFlamelonability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return (ModBlocks.MELON_FIRE.get()).getBurnOdd(state);
     }

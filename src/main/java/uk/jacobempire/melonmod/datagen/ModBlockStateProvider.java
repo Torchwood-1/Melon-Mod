@@ -9,17 +9,17 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
-	public ModBlockStateProvider(DataGenerator gen, String modid, ExistingFileHelper exFileHelper) {
-		super(gen, modid, exFileHelper);
-	}
+    public ModBlockStateProvider(DataGenerator gen, String modid, ExistingFileHelper exFileHelper) {
+        super(gen, modid, exFileHelper);
+    }
 
-	@Override
-	protected void registerStatesAndModels() {
-		ResourceLocation melonStoneTexture = blockTexture(MELON_STONE.get());
+    @Override
+    protected void registerStatesAndModels() {
+        ResourceLocation melonStoneTexture = blockTexture(MELON_STONE.get());
 
-		simpleBlock(MELON_DIRT.get());
-		slabBlock(MELON_STONE_SLAB.get(), MELON_STONE.getId(), melonStoneTexture);
-		stairsBlock(MELON_STONE_STAIRS.get(), melonStoneTexture);
-	}
+        simpleBlock(MELON_DIRT.get());
+        slabBlock(MELON_STONE_SLAB.get(), MELON_STONE.getId(), melonStoneTexture);
+        stairsBlock(MELON_STONE_STAIRS.get(), melonStoneTexture);
+    }
 
 }
