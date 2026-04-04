@@ -25,7 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(MELOBSIDIAN,
                 models().cubeColumn("melobsidian", mcLoc("block/obsidian"), mcLoc("block/melon_top")));
         simpleBlock(MELON_DIRT);
-        simpleBlock(MELON_GRASS, models().cross("melon_grass", modLoc("block/melon_grass")));
+        simpleBlock(MELON_GRASS, tintedCross("melon_grass", modLoc("block/melon_grass")));
         simpleBlock(MELON_ORE);
         simpleBlock(MELON_STONE);
         simpleBlock(MOBBLESTONE);
