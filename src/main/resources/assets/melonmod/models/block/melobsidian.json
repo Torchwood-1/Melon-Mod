@@ -1,8 +1,0 @@
-{
-  "_comment": "temporary model; needs texture",
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "minecraft:block/melon_top",
-    "side": "minecraft:block/obsidian"
-  }
-}

@@ -1,7 +1,0 @@
-{
-	"parent": "minecraft:item/template_spawn_egg",
-	"textures": {
-		"layer0": "melonmod:item/melon_goblin_spawn_egg",
-		"layer1": "melonmod:item/melon_goblin_spawn_egg_overlay"
-	}
-}

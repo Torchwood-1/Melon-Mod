@@ -1,12 +1,12 @@
 {
-  "parent": "item/generated",
+  "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "melonmod:item/melon_elytra"
   },
   "overrides": [
     {
       "predicate": {
-        "broken": 1
+        "minecraft:broken": 1.0
       },
       "model": "melonmod:item/broken_melon_elytra"
     }
