@@ -11,6 +11,8 @@
     "ElytraLayerMixin"
   ],
   "mixins": [
-    "CatEntityMixin"
+    "CatEntityMixin",
+    "EntityMixin",
+    "ServerPlayerEntityMixin"
   ]
 }

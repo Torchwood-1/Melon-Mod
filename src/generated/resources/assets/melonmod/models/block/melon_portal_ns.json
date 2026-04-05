@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/nether_portal_ns",
+  "textures": {
+    "portal": "melonmod:block/melon_fire_0",
+    "particle": "melonmod:block/melon_fire_0"
+  }
+}

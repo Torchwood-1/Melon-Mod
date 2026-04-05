@@ -21,6 +21,7 @@ import uk.jacobempire.melonmod.MelonMod;
 import uk.jacobempire.melonmod.common.block.MelonBushBlock;
 import uk.jacobempire.melonmod.common.block.MelonFireBlock;
 import uk.jacobempire.melonmod.common.block.MelonGrassBlock;
+import uk.jacobempire.melonmod.common.block.MelonPortalBlock;
 import uk.jacobempire.melonmod.common.world.dimension.SimpleTeleporter;
 
 public class ModBlocks {
@@ -84,7 +85,10 @@ public class ModBlocks {
                     .noOcclusion()),
             ItemGroup.TAB_DECORATIONS);
 
-    public static final RegistryObject<MelonFireBlock> MELON_FIRE = registerBlock("melon_fire",
+    public static final RegistryObject<MelonPortalBlock> MELON_PORTAL = registerBlockWithoutItem("melon_portal", 
+            () -> new MelonPortalBlock(AbstractBlock.Properties.copy(Blocks.NETHER_PORTAL)));
+
+    public static final RegistryObject<MelonFireBlock> MELON_FIRE = registerBlockWithoutItem("melon_fire",
             () -> new MelonFireBlock(AbstractBlock.Properties.copy(Blocks.FIRE)));
 
     public static final RegistryObject<Block> MELOBSIDIAN = registerBlock("melobsidian",
@@ -97,6 +101,10 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         return registerBlock(name, block, ItemGroup.TAB_BUILDING_BLOCKS);
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> supplier) {
+        return BLOCKS.register(name, supplier);
     }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup tab) {

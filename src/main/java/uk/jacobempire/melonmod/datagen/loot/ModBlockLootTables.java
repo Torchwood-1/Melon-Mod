@@ -30,6 +30,7 @@ public class ModBlockLootTables extends BlockLootTables {
         dropSelf(MELON_STONE_STAIRS);
         dropSelf(MOBBLESTONE);
         dropNone(MELON_FIRE);
+        dropNone(MELON_PORTAL);
     }
 
     protected void dropNone(RegistryObject<? extends Block> registryObject) {
